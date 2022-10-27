@@ -18,22 +18,22 @@ response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
 # ASN
 @app.route('/asn', methods = ['GET'])
 def get_asn():
-        return {'ASN' : apiResponse['asn']}
+        return {'ASN' : response.get('asn')}
 
+# ISP
+
+@app.route('/isp', methods = ['GET'])
+def get_isp():
+    return {'ISP': response.get('org')}
 
 # CountryCode
 @app.route('/countrycode', methods = ['GET'])
 def get_countryCode():
-    return {'Country Code' : apiResponse['country_code']}
+    return {'Country Code' : response.get('country_code')}
 
 # Geolocation
-# def get_ip():
-#     response = requests.get('https://api64.ipify.org?format=json').json()
-#     return response["ip"]
 @app.route('/geoloc', methods = ['GET'])
 def get_geoloc():
-    # ip_address = get_ip()
-    # response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
     location_data = {
         "Country": response.get("country_name"),
         "Continent_code": response.get("continent_code"),
@@ -46,10 +46,8 @@ def get_geoloc():
     return location_data
 
 # All
-@app.route('/ipApp', methods = ['GET'])
+@app.route('/', methods = ['GET'])
 def get_all():
-    # ip_address = get_ip()
-    # response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
     data = {
         'IP Address (IPv4)': response.get('ip'),
         'ASN' : response.get('asn'),
