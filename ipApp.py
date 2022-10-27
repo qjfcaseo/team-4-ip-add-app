@@ -51,6 +51,7 @@ def get_all():
     data = {
         'IP Address (IPv4)': response.get('ip'),
         'ASN' : response.get('asn'),
+        'ISP' : response.get('org'),
         'Country Code' : response.get('country_code'),
         "Country": response.get("country_name"),
         "Continent_code": response.get("continent_code"),
