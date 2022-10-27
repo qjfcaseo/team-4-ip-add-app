@@ -7,16 +7,19 @@ def get_ip():
     return response["ip"]
 
 
-def get_location():
+def get_geoloc():
     ip_address = get_ip()
     response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
     location_data = {
-        "ip": ip_address,
-        "city": response.get("city"),
+        "country": response.get("country_name"),
+        "continent_code": response.get("continent_code"),
         "region": response.get("region"),
-        "country": response.get("country_name")
+        "country_capital": response.get("country_capital"),
+        "city": response.get("city"),
+        "latitude": response.get("latitude"),
+        "longitude": response.get("longitude")
     }
     return location_data
 
 
-print(get_location())
+print(get_geoloc())
