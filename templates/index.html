@@ -1,16 +1,39 @@
 {% extends 'base.html' %}
 
 
-{% block title %} Team 4 IP Finder {% endblock %}
+{% block title %} IP Finder {% endblock %}
+
+
+
 {% block body %}
-<div class="container">
 
-<h1> Team 4 IP Finder</h1>
+<div class="container" style="text-align:center">
+    
 
-<p>Your IP Address: {{}}</p>
+    <br>
+    <br>
+    <h1>IP APP Team 4</h1>
+
+
+    <br>
+    <br>
+    
+    <h3>IP Address Information</h3>
+    <p>IP Address : {{data.ip}}</p>
+    <p>ASN : {{data.asn}}</p>
+    <p>Internet Service Provider : {{data.org}}</p>
+    <br>
+    <h3>Geolocation:</h3>
+    <p>City Location : {{data.city}}</p>
+    <p>Capital : {{data.country_capital}}</p>
+    <p>Country Code : {{data.country_code}} {{data.country}}</p>
+    <p>Region : {{data.region}}</p>
+    <p>Continent Code : {{data.continent_code}}</p>
+    <p>Latitude Information  : {{data.latitude}}</p>
+    <p>Longitude Information : {{data.longitude}}</p>
+
 
 </div>
-
 
 
 {% endblock %}

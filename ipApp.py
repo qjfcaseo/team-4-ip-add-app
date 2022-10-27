@@ -1,6 +1,8 @@
-from flask import Flask
+from flask import Flask, request, render_template
 from requests import get
 import requests 
+import ipapi
+
 
 app = Flask(__name__)
 
@@ -46,7 +48,7 @@ def get_geoloc():
     return location_data
 
 # All
-@app.route('/', methods = ['GET'])
+@app.route('/ipapp', methods = ['GET'])
 def get_all():
     data = {
         'IP Address (IPv4)': response.get('ip'),
@@ -62,6 +64,13 @@ def get_all():
         "Longitude": response.get("longitude")
     }
     return data
+
+@app.route('/', methods = ['GET'])
+def Index():
+    # search = request.form.get('search')
+    data = ipapi.location(output='json')
+    return render_template('index.html', data=data)
+    
 
 
 if __name__ == "__main__":
