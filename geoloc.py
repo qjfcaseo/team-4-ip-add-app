@@ -1,11 +1,10 @@
 # Gets geo location of the computer using API (ipapi.co)
 
-import requests
+import requests 
 
 def get_ip():
     response = requests.get('https://api64.ipify.org?format=json').json()
     return response["ip"]
-
 
 def get_geoloc():
     ip_address = get_ip()
@@ -20,6 +19,5 @@ def get_geoloc():
         "longitude": response.get("longitude")
     }
     return location_data
-
-
+    
 print(get_geoloc())
