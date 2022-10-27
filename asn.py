@@ -1,9 +1,16 @@
 # Getting the ASN
-import requests
+from flask import Flask
+from requests import get
 
+app = Flask (__name__)
+
+response = get('https://ipapi.co/json/').json()
+
+@app.route('/asn', methods = ['GET'])
 def get_asn():
-    response = requests.get('https://ipapi.co/json/').json()
-    return response["asn"]
-print (get_asn())
+        return {'ASN' : response['asn']}
+
+if __name__ == "__main__":    
+    app.run()
 
 
