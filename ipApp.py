@@ -33,6 +33,7 @@ def get_isp():
 def get_countryCode():
     return {'Country Code' : response.get('country_code')}
 
+
 # Geolocation
 @app.route('/geoloc', methods = ['GET'])
 def get_geoloc():
@@ -44,6 +45,7 @@ def get_geoloc():
         "City": response.get("city"),
         "Latitude": response.get("latitude"),
         "Longitude": response.get("longitude")
+        
     }
     return location_data
 
