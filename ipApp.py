@@ -33,6 +33,13 @@ def get_isp():
 def get_countryCode():
     return {'Country Code' : response.get('country_code')}
 
+<<<<<<< HEAD
+=======
+#Postal/Zip Code
+@app.route('/postal', methods = ['GET'])
+def get_postal():
+        return {'Postal/Zip Code' : response['postal']}
+>>>>>>> f4a8563efe02b269b9652de0286f3bb3c5574be5
 
 # Geolocation
 @app.route('/geoloc', methods = ['GET'])
@@ -49,6 +56,21 @@ def get_geoloc():
     }
     return location_data
 
+#Currency
+@app.route('/currency', methods = ['GET'])
+def get_currency():
+        return {'Currency' : response['currency']}
+
+#Currency Name
+@app.route('/currency_name', methods = ['GET'])
+def get_CurrencyName():
+        return {'Currency Name' : response['currency_name']}
+
+#Languages
+@app.route('/languages', methods = ['GET'])
+def get_languages():
+        return {'Languages' : response['languages']}
+
 # All
 @app.route('/ipapp', methods = ['GET'])
 def get_all():
@@ -62,8 +84,12 @@ def get_all():
         "Region": response.get("region"),
         "Country_capital": response.get("country_capital"),
         "City": response.get("city"),
+        "Postal/Zip Code": response.get("postal"),
         "Latitude": response.get("latitude"),
-        "Longitude": response.get("longitude")
+        "Longitude": response.get("longitude"),
+        "Currency": response.get("currency"),
+        "Currency Name": response.get("currency_name"),
+        "Languages" : response.get("languages")
     }
     return data
 
