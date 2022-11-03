@@ -7,17 +7,26 @@
 
 {% block body %}
 
-<div class="container" style="text-align:center">
-    
+<div class="container">
+    <br>
+    <br>
+    <marquee><h1>IP APP Team 4</h1></marquee>
 
     <br>
-    <br>
-    <h1>IP APP Team 4</h1>
 
+    <form action="{{url_for('Index')}}" method="post">
+
+        <div class="input-group mb-3 form-group">
+            <input type="text" name="search" class="form-control" placeholder="Enter IP Address" aria-label="Enter IP Address" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button type="submit"  class="btn btn-primary" value="searchIP">IP Lookup</button>
+            </div>
+        </div>
+
+    </form>
 
     <br>
-    <br>
-    
+
     <h3>IP Address Information</h3>
     <p>IP Address : {{data.ip}}</p>
     <p>ASN : {{data.asn}}</p>
@@ -29,8 +38,13 @@
     <p>Country Code : {{data.country_code}} {{data.country}}</p>
     <p>Region : {{data.region}}</p>
     <p>Continent Code : {{data.continent_code}}</p>
+    <p>Postal/Zip Code : {{data.postal}}</p>
     <p>Latitude Information  : {{data.latitude}}</p>
     <p>Longitude Information : {{data.longitude}}</p>
+    <p>Timezone : {{data.timezone}}</p>
+    <p>Currency : {{data.currency}}</p>
+    <p>Currency Name : {{data.currency_name}}</p>
+    <p>Languages : {{data.languages}}</p>
 
 
 </div>
