@@ -33,13 +33,15 @@ def get_isp():
 def get_countryCode():
     return {'Country Code' : response.get('country_code')}
 
-<<<<<<< HEAD
-=======
+# Timezone
+@app.route('/timezone', methods = ['GET'])
+def get_timezone():
+    return {'Timezone' : response.get('timezone')}
+
 #Postal/Zip Code
 @app.route('/postal', methods = ['GET'])
 def get_postal():
         return {'Postal/Zip Code' : response['postal']}
->>>>>>> f4a8563efe02b269b9652de0286f3bb3c5574be5
 
 # Geolocation
 @app.route('/geoloc', methods = ['GET'])
@@ -87,6 +89,7 @@ def get_all():
         "Postal/Zip Code": response.get("postal"),
         "Latitude": response.get("latitude"),
         "Longitude": response.get("longitude"),
+        "Timezone": response.get("timezone"),
         "Currency": response.get("currency"),
         "Currency Name": response.get("currency_name"),
         "Languages" : response.get("languages")
