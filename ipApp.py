@@ -6,21 +6,32 @@ import ipapi
 
 app = Flask(__name__)
 
-@app.route('/', methods = ['GET', 'POST'])
-def Index():
-    search = request.form.get('search')
-    data = ipapi.location(ip=search, output='json')
-    return render_template('index.html', data=data)
+
 
 # IP Address (IPv4)
 @app.route('/ip', methods = ['GET'])
 def get_ip():
     # return {'IP Address (IPv4)': apiResponse['ip']}
-    ip_api = requests.get('https://ipapi.co/json/').json()
+    ip_api = requests.get('https://ipapi.co/json/?key=V27xzP081ObqkaS8qJvRDHq8DEFMoULOKsqVhBcZkw0rYwBH0Q').json()
     return ip_api['ip']
-    
+
 ip_address = get_ip()
-response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
+response = requests.get(f'https://ipapi.co/{ip_address}/json/?key=V27xzP081ObqkaS8qJvRDHq8DEFMoULOKsqVhBcZkw0rYwBH0Q').json()
+
+
+@app.route('/', methods = ['GET', 'POST'])
+def Index():
+    search = request.form.get('search')
+    while search == None:
+    # data = ipapi.location(ip=search, output='json')
+        data = response
+    else:
+        data = requests.get(f'https://ipapi.co/{search}/json/?key=V27xzP081ObqkaS8qJvRDHq8DEFMoULOKsqVhBcZkw0rYwBH0Q').json()
+    return render_template('index.html', data=data)
+
+
+    
+
 
 # ASN
 @app.route('/asn', methods = ['GET'])
@@ -36,6 +47,11 @@ def get_isp():
 @app.route('/countrycode', methods = ['GET'])
 def get_countryCode():
     return {'Country Code' : response.get('country_code')}
+
+# CountryName
+@app.route('/countryname', methods = ['GET'])
+def get_countryName():
+    return {'Country Name' : response.get('country_name')}
 
 # Timezone
 @app.route('/timezone', methods = ['GET'])
