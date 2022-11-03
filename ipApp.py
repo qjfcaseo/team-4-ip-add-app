@@ -6,6 +6,12 @@ import ipapi
 
 app = Flask(__name__)
 
+@app.route('/', methods = ['GET', 'POST'])
+def Index():
+    search = request.form.get('search')
+    data = ipapi.location(ip=search, output='json')
+    return render_template('index.html', data=data)
+
 # IP Address (IPv4)
 @app.route('/ip', methods = ['GET'])
 def get_ip():
@@ -16,14 +22,12 @@ def get_ip():
 ip_address = get_ip()
 response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
 
-
 # ASN
 @app.route('/asn', methods = ['GET'])
 def get_asn():
         return {'ASN' : response.get('asn')}
 
 # ISP
-
 @app.route('/isp', methods = ['GET'])
 def get_isp():
     return {'ISP': response.get('org')}
@@ -64,14 +68,6 @@ def get_all():
         "Longitude": response.get("longitude")
     }
     return data
-
-@app.route('/', methods = ['GET'])
-def Index():
-    # search = request.form.get('search')
-    data = ipapi.location(output='json')
-    return render_template('index.html', data=data)
     
-
-
 if __name__ == "__main__":
     app.run()
