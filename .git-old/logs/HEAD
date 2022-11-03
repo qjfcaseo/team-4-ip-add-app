@@ -1,0 +1,19 @@
+0000000000000000000000000000000000000000 f2dd6821c7e77c39d68d9d05456e01b68e8c0f47 qjfcaseo <qjfcaseo@tip.edu.ph> 1666839656 +0000	clone: from https://github.com/qjfcaseo/team-4-ip-add-app.git
+f2dd6821c7e77c39d68d9d05456e01b68e8c0f47 f2dd6821c7e77c39d68d9d05456e01b68e8c0f47 qjfcaseo <qjfcaseo@tip.edu.ph> 1666840269 +0000	checkout: moving from main to joel-ip-app
+f2dd6821c7e77c39d68d9d05456e01b68e8c0f47 e3b752db44e76284d4c9b9064b4627f1178621c0 qjfcaseo <qjfcaseo@tip.edu.ph> 1666842175 +0000	merge upstream/earl-ip-app: Fast-forward
+e3b752db44e76284d4c9b9064b4627f1178621c0 dcb8624a66f47f38ff61677c83f16cd97932e35f qjfcaseo <qjfcaseo@tip.edu.ph> 1666842813 +0000	commit: added App and Add .py
+dcb8624a66f47f38ff61677c83f16cd97932e35f e1e6ed7d7bc5d07f7e3958e0f90b18f961dace60 qjfcaseo <qjfcaseo@tip.edu.ph> 1666843028 +0000	merge upstream/earl-ip-app: Fast-forward
+e1e6ed7d7bc5d07f7e3958e0f90b18f961dace60 a0e124c46f7e2d41a3f9f482e71948768973aa51 qjfcaseo <qjfcaseo@tip.edu.ph> 1666844118 +0000	merge upstream/earl-ip-app: Fast-forward
+a0e124c46f7e2d41a3f9f482e71948768973aa51 cf289eb857aef75c3aed492b10ba4f56a6de4808 qjfcaseo <qjfcaseo@tip.edu.ph> 1666859449 +0000	commit: working
+cf289eb857aef75c3aed492b10ba4f56a6de4808 829e1d0ee6a086dc3a156292431b29041a16e5fb qjfcaseo <qjfcaseo@tip.edu.ph> 1666866833 +0000	commit: ipAdd.py Final
+829e1d0ee6a086dc3a156292431b29041a16e5fb 3ad05ae49be33082450f655fa2267655eb49f44d qjfcaseo <qjfcaseo@tip.edu.ph> 1666867541 +0000	commit (merge): fixed merge conflicts
+3ad05ae49be33082450f655fa2267655eb49f44d 1a8e13ede179b4b1d34db2b838db79eaeefbb3d9 qjfcaseo <qjfcaseo@tip.edu.ph> 1666868875 +0000	commit: ipApp Progress
+1a8e13ede179b4b1d34db2b838db79eaeefbb3d9 c90457d4487f2635509c7973ddc9d2d3eb269bff qjfcaseo <qjfcaseo@tip.edu.ph> 1666868958 +0000	merge upstream/earl-ip-app: Merge made by the 'recursive' strategy.
+c90457d4487f2635509c7973ddc9d2d3eb269bff 3f353c7bc008a21dfcdb6b5b7dd937fdc953a713 qjfcaseo <qjfcaseo@tip.edu.ph> 1666876366 +0000	commit: working
+3f353c7bc008a21dfcdb6b5b7dd937fdc953a713 d9936ce7ee1d2dad47252168061af69fd20c7bbc qjfcaseo <qjfcaseo@tip.edu.ph> 1666876737 +0000	commit: all working no UI
+d9936ce7ee1d2dad47252168061af69fd20c7bbc f1be11a69a7b0137d8b1dbacf70adaa6693320ba qjfcaseo <qjfcaseo@tip.edu.ph> 1666876876 +0000	commit: added ISP to all
+f1be11a69a7b0137d8b1dbacf70adaa6693320ba f8febeb52ce12e3f07b09ee423e868247e809bf0 qjfcaseo <qjfcaseo@tip.edu.ph> 1666879266 +0000	commit: Final
+f8febeb52ce12e3f07b09ee423e868247e809bf0 f2dd6821c7e77c39d68d9d05456e01b68e8c0f47 qjfcaseo <qjfcaseo@tip.edu.ph> 1666879327 +0000	checkout: moving from joel-ip-app to main
+f2dd6821c7e77c39d68d9d05456e01b68e8c0f47 f8febeb52ce12e3f07b09ee423e868247e809bf0 qjfcaseo <qjfcaseo@tip.edu.ph> 1666879332 +0000	merge joel-ip-app: Fast-forward
+f8febeb52ce12e3f07b09ee423e868247e809bf0 f5f45080e05b1643ff43d79f92125724bae7cebe qjfcaseo <qjfcaseo@tip.edu.ph> 1667446689 +0000	commit: some changes
+f5f45080e05b1643ff43d79f92125724bae7cebe f8febeb52ce12e3f07b09ee423e868247e809bf0 qjfcaseo <qjfcaseo@tip.edu.ph> 1667447070 +0000	checkout: moving from main to joel-ip-app
